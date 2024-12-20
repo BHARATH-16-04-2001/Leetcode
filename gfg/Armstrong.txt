@@ -1,0 +1,10 @@
+class Solution:
+    def armstrongNumber (self, n):
+        # code here 
+        arm = 0
+        temp = n
+        while n != 0:
+            rem = n % 10
+            arm = (rem ** 3) + arm
+            n = n // 10
+        return arm == temp
