@@ -1,0 +1,27 @@
+def symmetry(n: int):
+    # Write your solution here.
+    space = (2*n)-2
+    noc = 1
+    nor = 2*n
+
+    for i in range(1,2*n):
+        for j in range(1,2*n+1):
+            if j <= noc:
+                print("*",end='')
+            else:
+                print(" ",end='')
+
+            if j >=nor:
+                print("*",end='')
+            else:
+                print(" ",end='')
+        print()
+        if i < n:
+            noc += 1
+            nor -= 1
+            space -= 2
+        else:
+            noc -= 1
+            nor += 1
+            space += 2
+    pass
