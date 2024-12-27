@@ -1,0 +1,20 @@
+# n = int(input("Enter the size of the list: "))
+
+arr = [3,5,1,7,8,9]
+target = 5
+
+def Linear_search(arr):
+    n = len(arr)
+    element_present = False
+    for i in range(n):
+        if arr[i] == target:
+            # print(i)
+            return i
+            element_present = True
+            break
+
+    if element_present == False:
+        print("Element not present in the list")
+
+ref = Linear_search(arr)
+print(ref)
