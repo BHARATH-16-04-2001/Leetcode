@@ -1,0 +1,30 @@
+n = int(input("enter the size of the list: "))
+arr = []
+
+print("enter the elements: ")
+for i in range(n):
+    val = int(input())
+    arr.append(val)
+
+target = int(input("Target element is: "))
+
+def Binary_search(n,arr,target):
+    l = 0
+    r = n - 1
+
+    while l <= r:
+        mid = (l+r) // 2
+
+        if target == arr[mid]:
+            return mid
+            break
+
+        elif target < arr[mid]:
+            r = mid - 1
+
+        else:
+            l = mid + 1
+    return  -1
+
+ref = Binary_search(n,arr,target)
+print(ref)
