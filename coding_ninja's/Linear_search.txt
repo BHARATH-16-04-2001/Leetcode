@@ -1,0 +1,12 @@
+def linearSearch(n: int, num: int, arr: [int]) -> int:
+    # Write your code here.
+    for i in range(n):
+        found = 0
+        if arr[i] == num:
+            found = 1
+            return i
+            break
+    if found == 0:
+        return -1
+    return arr
+    pass
