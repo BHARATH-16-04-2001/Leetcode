@@ -1,0 +1,28 @@
+arr = [7,6,10,5,9,2,1,15,7]
+n = len(arr)
+
+def Partition(arr,l,r):
+    pivot = arr[l]
+    start = l
+    end = r
+    while start < end:
+        while start < len(arr) and  (arr[start] <= pivot):
+            start += 1
+
+        while (arr[end] > pivot):
+            end -= 1
+
+        if start < end:
+            arr[start], arr[end] = arr[end], arr[start]
+
+    arr[l], arr[end] = arr[end], arr[l]
+    return end
+
+def Quick_sort(arr,l,r):
+    if l < r:
+        loc = Partition(arr, l, r)
+        Quick_sort(arr, l, loc-1)
+        Quick_sort(arr, loc+1, r)
+    return arr
+ref = Quick_sort(arr,0,n-1)
+print(ref)
