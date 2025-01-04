@@ -1,10 +1,9 @@
 class Solution:
     def minAnd2ndMin(self, arr):
-        #code here
         n = len(arr)
         if n < 2:
             return -1, -1
-        
+
         small = arr[0]
         s_small = float('inf')
         
@@ -17,7 +16,6 @@ class Solution:
                 s_small = arr[i]
                 
             if s_small == float('inf'):
-                return -1,-1
-                
+                return -1,-1   
         return small,s_small
         
