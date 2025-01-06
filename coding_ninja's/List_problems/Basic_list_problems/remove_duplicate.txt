@@ -1,0 +1,16 @@
+def removeDuplicates(arr,n):
+    # brute force method
+
+     s = set()
+     for i in range(n):
+         s.add(arr[i]) 
+
+     idx =0 
+     for i in s:
+         idx += 1
+     return idx
+
+	or 
+
+
+	
