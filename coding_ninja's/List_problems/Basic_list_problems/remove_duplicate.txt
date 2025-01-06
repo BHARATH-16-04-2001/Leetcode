@@ -10,7 +10,7 @@ def removeDuplicates(arr,n):
          idx += 1
      return idx
 
-	or 
+	or (2 pointer approach)
 
 def removeDuplicates(arr,n):
     i = 0
