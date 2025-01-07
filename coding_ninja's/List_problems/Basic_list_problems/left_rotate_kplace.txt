@@ -1,0 +1,32 @@
+# brute force
+def rotateArray(arr: list, k: int) -> list:
+    # Write your code here.
+    n = len(arr)
+    d = k % n
+    temp = arr[:k]
+
+    for i in range(d,n):
+        arr[i-k] = arr[i]
+   
+    for i in range(n - d, n):
+        arr[i] = temp[i - (n - d)]
+
+    return arr
+    pass
+
+#optimal 
+def reverse(arr,start,end):
+    while start < end:
+        temp = arr[start]
+        arr[start] = arr[end]
+        arr[end] = temp
+        start += 1
+        end -= 1
+
+def rotateArray(arr: list, k: int) -> list:
+    n = len(arr)
+    k = k % n
+    reverse(arr, 0, k-1)
+    reverse(arr, k, n-1)
+    reverse(arr, 0, n-1)
+    return arr
