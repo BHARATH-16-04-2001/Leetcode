@@ -29,3 +29,17 @@ def sortedArray(a: [int], b: [int]) -> [int]:
             union.append(b[j])
         j += 1
     return union
+
+#-------- basic approach ---------------
+def sortedArray(a: [int], b: [int]) -> [int]:
+    # Brute force approch
+    temp = set()
+    n = len(a)
+    n1 = len(b)
+    for i in range(n):
+        temp.add(a[i])
+
+    for i in range(n1):
+        temp.add(b[i])
+    return temp
+    pass
