@@ -17,3 +17,18 @@ def moveZeros(n: int,  a: [int]) -> [int]:
             j += 1
     return a
     pass
+
+#------	Brute force approach -----------------
+def moveZeros(n: int,  a: [int]) -> [int]:
+    temp = []
+    for i in range(n):
+        if a[i] != 0:
+            temp.append(a[i])
+
+    size = len(temp)
+    for i in range(size):
+        a[i] = temp[i]
+
+    for i in range(size,n):
+        a[i] = 0
+    return a
