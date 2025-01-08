@@ -1,0 +1,13 @@
+def reverse(arr,start,end):
+    while start <= end:
+        temp = arr[start]
+        arr[start] = arr[end]
+        arr[end] = temp
+        start += 1
+        end -= 1
+
+def left_rotate_k_place(arr, n, k):
+    reverse(arr, n-k, k-1)
+    reverse(arr,0,n-k-1)
+    reverse(arr,0,n-1)
+    return arr
