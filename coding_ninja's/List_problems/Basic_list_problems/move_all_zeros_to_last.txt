@@ -1,0 +1,19 @@
+#optimal code
+def moveZeros(n: int,  a: [int]) -> [int]:
+    #for finding the zero
+    j = -1
+    for i in range(n):
+        if a[i] == 0:
+            j = i
+            break
+    if j == -1:
+        return a
+
+    for  i in range(j+1,n):
+        if a[i] != 0:
+            temp = a[i]
+            a[i] = a[j]
+            a[j] = temp
+            j += 1
+    return a
+    pass
