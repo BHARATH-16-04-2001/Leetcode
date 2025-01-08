@@ -1,0 +1,27 @@
+def count_digits(n):
+    count = 0
+    while n != 0:
+        n = n // 10
+        count += 1
+    return count
+        
+
+
+
+def checkArmstrong(n):
+    #write your code here !!!!!!!!!
+    pow = count_digits(n)
+    temp = n
+    arm = 0
+    while temp != 0:
+        rem = temp % 10
+        arm = (rem ** pow) +arm
+        temp = temp//10
+    if n == arm:
+        return True
+    else:
+        return False
+
+
+
+    
