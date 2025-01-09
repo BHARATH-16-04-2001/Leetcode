@@ -1,0 +1,7 @@
+n= int(input("enter"))
+def print_1_n(i,n):
+    if i > n:
+        return
+    print_1_n(i+1,n)
+    print(i)
+print_1_n(1,n)
