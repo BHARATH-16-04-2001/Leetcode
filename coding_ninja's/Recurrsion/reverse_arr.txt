@@ -1,0 +1,18 @@
+
+arr = [6,5,4,3,2,1]
+n = len(arr)
+def reverse_array(i, j):
+    if i >= j:
+        return arr
+    arr[i], arr[j] = arr[j], arr[i]
+    return reverse_array(i+1,j-1)
+ref = reverse_array(0,n-1)
+print(ref)
+
+def reverse_array(i, arr, n):
+    if i >= n/2:
+        return arr
+    arr[i], arr[n-1-i] = arr[n-1-i], arr[i]
+    return reverse_array(i+1, arr, n)
+ref = reverse_array(0,arr,n)
+print(ref)
