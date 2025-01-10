@@ -18,3 +18,19 @@ def consecutiveOnes(arr: List[int]) -> int:
 
     return maxi
     pass
+
+
+		or
+
+
+
+# for i in range(len(arr)):
+#     if arr[i] == 1:
+#         count += 1
+#     else:
+#         if count > high_ones:
+#             high_ones = count
+#         count = 0
+# # for Final check for the last sequence of ones (if at last 0 is not present)
+# if count > high_ones:
+#     high_ones = count
