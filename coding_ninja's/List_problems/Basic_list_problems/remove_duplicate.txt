@@ -10,13 +10,4 @@ def removeDuplicates(arr,n):
          idx += 1
      return idx
 
-	or (2 pointer approach)
-
-def removeDuplicates(arr,n):
-    i = 0
-    for j in range(1,len(arr)):
-        if arr[j] != arr[i]:
-            arr[i+1] = arr[j]
-            i += 1
-    return i+1
-    pass	
+	
