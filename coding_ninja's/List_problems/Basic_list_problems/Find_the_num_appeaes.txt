@@ -1,0 +1,20 @@
+from typing import *
+ # # optimall code
+def getSingleElement(arr : List[int]) -> int:
+  
+    xor = 0
+    for i in range(len(arr)):
+        xor = xor ^ arr[i]
+    return xor
+    pass
+
+#--------better
+# def getSingleElement(arr : List[int]) -> int:
+   
+#     dict = { }
+#     for i in arr:
+#         dict[i] = dict.get(i,0) + 1
+
+#     for i in arr:
+#         if dict[i] == 1:
+#             return i
