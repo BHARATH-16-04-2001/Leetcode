@@ -1,0 +1,32 @@
+def longestSubarrayWithSumK(a: [int], k: int) -> int:
+    # Write your code here
+    n = len(a)
+    i = 0
+    j = 0
+    sum = a[0]
+    maxlen = 0
+
+    while j < n:     
+        while i <= j and sum > k:
+            sum -= a[i]
+            i += 1
+
+        if sum == k:
+            maxlen = max(maxlen,(j-i)+1) 
+
+        j += 1
+        if j < n:
+            sum += a[j]            
+    return maxlen 
+
+# def longestSubarrayWithSumK(a: [int], k: int) -> int:
+    # l = 0
+    # for i in range(n):
+    #     sum = 0
+    #     for j in range(i,n):
+    #         sum += a[j]
+    #         if sum == k :
+    #             l = max( l, (j - i)+1 )
+
+    # return l
+    pass
