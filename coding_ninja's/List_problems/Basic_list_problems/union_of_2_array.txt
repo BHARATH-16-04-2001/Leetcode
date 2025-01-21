@@ -1,6 +1,5 @@
 # ------	optimal approach ---------------
 def sortedArray(a: [int], b: [int]) -> [int]:
-    # optimal  approch
     i = 0
     j = 0 
     union = []

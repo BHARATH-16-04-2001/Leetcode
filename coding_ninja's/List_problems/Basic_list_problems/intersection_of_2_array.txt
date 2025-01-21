@@ -1,5 +1,5 @@
 def findArrayIntersection(arr: list, n: int, brr: list, m: int):
-    # Sort the arrays if not sorted
+    
     arr.sort()
     brr.sort()
     

@@ -1,4 +1,4 @@
-class Solution:
+class Solution: 
     def heapify(self,arr, n, i):
             small = i
             l = 2*i + 1
