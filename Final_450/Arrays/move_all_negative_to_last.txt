@@ -1,0 +1,21 @@
+ def segregateElements(self, arr):
+        n = len(arr)
+        temp = [0] * n  
+        idx = 0
+        # for positive number
+        for i in range(n):
+            if arr[i] >= 0:
+                temp[idx] = arr[i]
+                idx += 1
+        
+        #for negative numbers
+        for i in range(n):
+            if arr[i] < 0:
+                temp[idx] = arr[i]
+                idx += 1
+                
+
+        for i in range(n):
+            arr[i] = temp[i]
+    
+        return arr
