@@ -1,0 +1,19 @@
+class Solution:
+    def lcmAndGcd(self, a : int, b : int) -> List[int]:
+        x = a
+        y = b
+        lcm = 0
+        hcf = 0
+        # code here
+        while a > 0 and b > 0:
+            if a > b:
+                a = a % b
+            else:
+                b = b % a
+        if a == 0:
+            hcf = b
+        else:
+            hcf = a
+            
+        lcm=( x * y) // hcf
+        return lcm,hcf
