@@ -1,0 +1,17 @@
+if __name__ == '__main__':
+    n = int(input())
+    arr = map(int, input().split())
+    
+    arrr = list(arr)
+    max = -10**5
+    s_max = -10**5
+    for i in range(len(arrr)):
+        if arrr[i] > max:
+            s_max = max
+            max = arrr[i]
+           
+        elif arrr[i] > s_max and arrr[i] != max:
+            s_max = arrr[i]
+    print(s_max)            
+       
+        
