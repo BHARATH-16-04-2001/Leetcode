@@ -12,6 +12,8 @@ class Solution:
         # self.reverse(nums, 0, k - 1)  
         # self.reverse(nums, k, len(nums)-1)  
         # return nums
+
+#Using temp and slicing
         
     def rotate(self, nums: List[int], k: int) -> None:
         k = k % len(nums)
