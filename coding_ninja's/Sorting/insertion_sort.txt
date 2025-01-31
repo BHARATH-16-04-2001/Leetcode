@@ -16,3 +16,14 @@ def insertionSort(n: int, arr: List[int]) -> None:
         arr[j+1] = temp
     return arr
     pass
+
+-----------------------------------------------
+
+def Insertion_sort(arr):
+    for i in range(len(arr)-1):
+        for j in range(i+1,0,-1):
+            if  arr[j-1] > arr[j]:
+                arr[j-1], arr[j] = arr[j], arr[j-1]
+    return arr
+res = Insertion_sort(l)
+print(res)
