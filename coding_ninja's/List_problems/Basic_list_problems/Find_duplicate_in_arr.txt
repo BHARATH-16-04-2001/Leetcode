@@ -1,0 +1,19 @@
+from sys import *
+from collections import *
+from math import *
+
+# def findDuplicate(arr:list, n:int):
+#     for i in range(n):
+#         for j in range(i+1,n):
+#             if arr[i] == arr[j]:
+#                  return arr[j]   
+#     return -1         
+#     pass
+
+def findDuplicate(arr:list, n:int):
+    dic = {}
+    for i in arr:
+        if i in dic:
+            return i
+        dic[i] = 1
+    return -1
