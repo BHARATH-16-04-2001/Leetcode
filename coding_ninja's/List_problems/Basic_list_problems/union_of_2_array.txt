@@ -17,7 +17,7 @@ def sortedArray(a: [int], b: [int]) -> [int]:
             j += 1
 
     # If any elements left in list a
-    while i < n1:  
+    while i < n1:    
         if union[-1] != a[i]:
             union.append(a[i])
         i += 1
