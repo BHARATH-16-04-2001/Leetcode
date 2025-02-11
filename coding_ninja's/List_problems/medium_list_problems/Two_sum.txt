@@ -1,0 +1,40 @@
+# #----Brute force ----------
+# def read(n: int, book: [int], target: int) -> str:
+#     for i in range(n):
+#         for j in range(i+1, n):
+#             if book[i] + book[j] == target:
+#                 return "YES"  
+#     return "NO"
+#     pass
+
+
+# #----Better approch -----------------
+# def read(n: int, book: [int], target: int) -> str:
+#     map = {}
+
+#     for i in range(n):
+#         num = book[i]
+#         need = target - num
+
+#         if need in map:
+#             return "YES"
+#         map[num] = i
+#     return "NO"
+        
+def read(n: int, book: [int], target: int) -> str:
+    book.sort()
+    left = 0
+    right = n-1
+
+    while left < right:
+        sum = book[left] + book[right]
+
+        if sum == target:
+            return "YES"
+
+        elif sum < target:
+            left += 1
+
+        else:
+            right -= 1
+    return "NO"
