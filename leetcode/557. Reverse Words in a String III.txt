@@ -1,0 +1,21 @@
+class Solution:
+    def reverseWords(self, s: str) -> str:
+        new_word = ""
+        new_sen = ""
+        s = s + " "
+        
+        i , j = 0 ,len(s)
+        while i < j:
+            if s[i] != " ":
+                new_word = s[i] + new_word
+
+            elif new_word != "":
+                if new_sen == "":
+                    new_sen += new_word
+                    new_word = ""
+                else:
+                     new_sen = new_sen + " " + new_word 
+                     new_word = ""
+            i += 1
+        return new_sen
+      
