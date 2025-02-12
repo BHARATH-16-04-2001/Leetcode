@@ -1,0 +1,46 @@
+class Solution:
+    # def majorityElement(self, nums: List[int]) -> int:
+        # for i in range(len(nums)):
+        #     count = 0
+        #     for j in range(len(nums)):
+        #         if nums[i] == nums[j]:
+        #             count += 1
+
+        #     if count > len(nums) // 2:
+        #         return nums[i]
+        # return -1
+
+    # def majorityElement(self, nums: List[int]) -> int:
+    #     dict = {}
+    #     for i in nums:
+    #         dict[i] = dict.get(i, 0) + 1
+
+    #         if dict[i] > len(nums) // 2:
+    #             return i
+    #     return -1
+
+    # def majorityElement(self, nums: List[int]) -> int:
+    #     count = 0
+    #     element = 0
+
+    #     for i in range(len(nums)):
+    #         if count == 0:
+    #             element = nums[i]
+    #             count += 1
+    #         elif element == nums[i]:
+    #             count += 1
+    #         else:
+    #             count -= 1
+    #     cnt = 0
+    #     for i in range(len(nums)):
+    #         if element == nums[i]:
+    #             cnt += 1
+    #         if cnt > len(nums) // 2:
+    #             return nums[i]
+    #     return -1
+
+    def majorityElement(self, nums: List[int]) -> int:
+        nums.sort()
+        return nums[len(nums)//2]
+
+        
